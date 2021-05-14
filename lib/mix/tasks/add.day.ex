@@ -21,23 +21,23 @@ defmodule Mix.Tasks.Add.Day do
     test_content = "defmodule Day#{capitalize(day)}Test do
       use ExUnit.Case
       test \"solves part one sample\" do
-        solution = DayOne.part_one(\"assets/day_#{day}_sample.txt\")
+        solution = Day#{capitalize(day)}.part_one(\"assets/day_#{day}_sample.txt\")
         assert solution == :ok
       end
 
       test \"solves part one input\" do
-        solution = DayOne.part_one(\"assets/day_#{day}_input.txt\")
+        solution = Day#{capitalize(day)}.part_one(\"assets/day_#{day}_input.txt\")
         assert solution == :ok
       end
 
 
       test \"solves part two sample\" do
-        solution = DayOne.part_two(\"assets/day_#{day}_sample.txt\")
+        solution = Day#{capitalize(day)}.part_two(\"assets/day_#{day}_sample.txt\")
         assert solution == :ok
       end
 
       test \"solves part two input\" do
-        solution = DayOne.part_two(\"assets/day_#{day}_input.txt\")
+        solution = Day#{capitalize(day)}.part_two(\"assets/day_#{day}_input.txt\")
         assert :ok == :ok
       end
     end
