@@ -37,7 +37,7 @@ defmodule DayOne do
     split =
       String.split(input, "\n")
       |> Enum.map(&String.to_integer/1)
-      |> Enum.with_index
+      |> Enum.with_index()
 
     reversed = Enum.reverse(split)
 
@@ -46,9 +46,11 @@ defmodule DayOne do
     for {x, i} <- split do
       spawn(fn ->
         remaining = Stream.filter(split, fn {_, i2} -> i2 > i end)
+
         for {y, i2} <- remaining do
           spawn(fn ->
             rev = Stream.take_while(reversed, fn {r, i3} -> i3 > i2 end)
+
             for {z, _} <- rev do
               case x + y + z do
                 2020 -> send(pid, {:done, {x, y, z}})

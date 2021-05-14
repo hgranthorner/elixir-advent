@@ -20,14 +20,13 @@ defmodule DayOneTest do
     assert solution == 1_015_476
   end
 
-
   test "solves part two sample" do
     solution = DayOne.part_two("assets/day_one_sample.txt")
-    assert solution == 241861950
+    assert solution == 241_861_950
   end
 
   test "solves part two input" do
-    solution = DayOne.part_two("assets/day_one_input.txt") |> IO.inspect
+    solution = DayOne.part_two("assets/day_one_input.txt") |> IO.inspect()
     assert :ok == :ok
   end
 end
