@@ -47,7 +47,7 @@ defmodule Mix.Tasks.Add.Day do
     File.write!("test/day_#{day}_test.exs", test_content)
     File.touch!("assets/day_#{day}_sample.txt")
     File.touch!("assets/day_#{day}_input.txt")
-    Mix.Tasks.format()
+    Mix.Task.run("format")
   end
 
   def capitalize(arg) do
