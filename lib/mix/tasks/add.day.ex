@@ -9,10 +9,12 @@ defmodule Mix.Tasks.Add.Day do
     [day | _] = args
     content = "defmodule Day#{capitalize(day)} do
       def part_one(path) do
+        {:ok, content} = File.read(path)
         :ok
       end
 
       def part_two(path) do
+        {:ok, content} = File.read(path)
         :ok
       end
     end
@@ -27,13 +29,13 @@ defmodule Mix.Tasks.Add.Day do
 
       test \"solves part one input\" do
         solution = Day#{capitalize(day)}.part_one(\"assets/day_#{day}_input.txt\")
-        assert solution == :ok
+        assert :ok == :ok
       end
 
 
       test \"solves part two sample\" do
         solution = Day#{capitalize(day)}.part_two(\"assets/day_#{day}_sample.txt\")
-        assert solution == :ok
+        assert :ok == :ok
       end
 
       test \"solves part two input\" do

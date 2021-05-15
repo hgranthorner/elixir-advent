@@ -45,7 +45,7 @@ defmodule DayTwo do
     |> Stream.map(fn map ->
       first = String.at(map.pattern, map.minimum - 1) == <<map.char::utf8>>
       second = String.at(map.pattern, map.maximum - 1) == <<map.char::utf8>>
-      IO.inspect({first, second, xor(first, second)})
+
       if xor(first, second) do
         :success
       else
