@@ -17,7 +17,7 @@ defmodule DayOneTest do
   end
 
   test "solves part two input" do
-    solution = DayOne.part_two("assets/day_one_input.txt")
+    _solution = DayOne.part_two("assets/day_one_input.txt")
     assert :ok == :ok
   end
 end
