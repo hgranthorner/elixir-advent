@@ -7,17 +7,17 @@ defmodule DayThreeTest do
   end
 
   test "solves part one input" do
-    solution = DayThree.part_one("assets/day_three_input.txt") |> IO.inspect()
+    solution = DayThree.part_one("assets/day_three_input.txt")
     assert solution == 164
   end
 
   test "solves part two sample" do
-    _solution = DayThree.part_two("assets/day_three_sample.txt")
-    assert :ok == :ok
+    # solution = DayThree.part_two("assets/day_three_sample.txt")
+    # assert solution == 336
   end
 
   test "solves part two input" do
-    _solution = DayThree.part_two("assets/day_three_input.txt")
-    assert :ok == :ok
+    solution = DayThree.part_two("assets/day_three_input.txt")
+    assert solution == 5_007_658_656
   end
 end
